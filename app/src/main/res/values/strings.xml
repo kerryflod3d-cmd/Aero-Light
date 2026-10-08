@@ -1,0 +1,16 @@
+<resources>
+    <!-- Nombre de la aplicación -->
+    <string name="app_name">Aero Light</string>
+
+    <!-- Lista de idiomas disponibles para la selección de preferencias del usuario -->
+    <string-array name="idiomas">
+        <!-- Opción de idioma Español -->
+        <item>Español</item>
+        <!-- Opción de idioma Inglés -->
+        <item>Inglés</item>
+        <!-- Opción de idioma Italiano -->
+        <item>Italiano</item>
+        <!-- Opción de idioma Portugués -->
+        <item>Portugues</item>
+    </string-array>
+</resources>

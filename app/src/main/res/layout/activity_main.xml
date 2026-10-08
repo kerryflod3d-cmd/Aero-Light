@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo_frutiger"
+    tools:context=".views.MainActivity">
+
+    <!-- Título principal anclado a la parte superior de la pantalla -->
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Bienvenido a Aero Light"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#01579B"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Campos de texto con estilo de cristal -->
+    <EditText
+        android:id="@+id/edtUsuario"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_aero_cristal"
+        android:elevation="2dp"
+        android:hint="Usuario"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="16dp"
+        android:background="@drawable/bg_aero_cristal"
+        android:elevation="2dp"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toStartOf="@+id/btnMostrarPassword"
+        app:layout_constraintStart_toStartOf="@id/edtUsuario"
+        app:layout_constraintTop_toBottomOf="@id/edtUsuario" />
+
+    <ImageButton
+        android:id="@+id/btnMostrarPassword"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Mostrar u ocultar contraseña"
+        android:onClick="onMostrarPasswordClick"
+        android:src="@drawable/ic_visibility_24"
+        app:layout_constraintBottom_toBottomOf="@+id/edtPassword"
+        app:layout_constraintEnd_toEndOf="@id/edtUsuario"
+        app:layout_constraintStart_toEndOf="@+id/edtPassword"
+        app:layout_constraintTop_toTopOf="@+id/edtPassword" />
+
+    <CheckBox
+        android:id="@+id/chkRecordarme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Recordarme"
+        android:textColor="#004D40"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/edtPassword"
+        app:layout_constraintTop_toBottomOf="@id/edtPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnIngresar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_aero_boton_azul"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:onClick="onIngresarClick"
+        android:text="Ingresar"
+        app:layout_constraintEnd_toEndOf="@id/edtPassword"
+        app:layout_constraintStart_toStartOf="@id/edtPassword"
+        app:layout_constraintTop_toBottomOf="@id/chkRecordarme" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLimpiar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_aero_cristal"
+        android:textColor="#D32F2F"
+        android:textStyle="bold"
+        android:onClick="onLimpiarClick"
+        android:text="Limpiar"
+        app:layout_constraintEnd_toEndOf="@+id/btnIngresar"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/btnIngresar"
+        app:layout_constraintTop_toBottomOf="@+id/btnIngresar" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnIrARegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:padding="12dp"
+        android:background="@drawable/bg_aero_boton_verde"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:elevation="4dp"
+        android:onClick="onIrARegistroClick"
+        android:text="¿No tienes cuenta? Regístrate"
+        app:layout_constraintEnd_toEndOf="@+id/btnLimpiar"
+        app:layout_constraintStart_toStartOf="@+id/btnLimpiar"
+        app:layout_constraintTop_toBottomOf="@+id/btnLimpiar" />
+
+    <ProgressBar
+        android:id="@+id/progressBarLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

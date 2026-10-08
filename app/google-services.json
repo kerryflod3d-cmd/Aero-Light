@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "909147639611",
+    "project_id": "light-iot-d936b",
+    "storage_bucket": "light-iot-d936b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909147639611:android:1aaf9b3ca16790fd2c711e",
+        "android_client_info": {
+          "package_name": "com.example.miprimeraaplicacion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBibp7dwzRaC4JBkFDa-9Ao-lbG7B2Oo5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

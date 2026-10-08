@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_aero_fondo"> <!-- Usamos el gradiente ligero en vez de la imagen -->
+
+    <!-- Botón Volver con color azul Aero -->
+    <Button
+        android:id="@+id/btnVolverLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Volver"
+        android:textColor="#01579B"
+        android:textStyle="bold"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Tu logo del pez (asegúrate de que el nombre coincida con el tuyo, por ejemplo @drawable/pez_burbuja) -->
+    <ImageView
+        android:id="@+id/imgLogoLista"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/pez"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título con estilo Frutiger Aero (Azul con sombra blanca) -->
+    <TextView
+        android:id="@+id/txtTituloLista"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Historial de Lecturas"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#01579B"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoLista" />
+
+    <!-- La lista ahora es un panel de cristal en lugar de un cuadro blanco sólido -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvLecturas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_aero_cristal"
+        android:elevation="4dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.65"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTituloLista"
+        app:layout_constraintVertical_bias="0.1"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <!-- Botón flotante verde brillante estilo Aero -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAgregarLectura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        android:contentDescription="Agregar lectura"
+        app:backgroundTint="#43A047"
+        app:tint="@android:color/white"
+        android:src="@android:drawable/ic_input_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
